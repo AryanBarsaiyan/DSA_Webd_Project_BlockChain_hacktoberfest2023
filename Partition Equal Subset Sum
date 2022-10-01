@@ -1,0 +1,52 @@
+//       https://leetcode.com/problems/partition-equal-subset-sum/
+
+class Solution {
+   
+    bool dp(int sum,vector<int> nums,int n,bool d[201][20001])
+    {
+        for(int i=0;i<=n;i++)
+        {
+            for(int j=0;j<=n;j++)
+            {
+                if(i==0)
+                    d[i][j]=0;
+                if(j==0)
+                    d[i][j]=1;
+                
+            }
+        }
+        for(int i=1;i<=n;i++)
+        {
+            for(int j=1;j<=sum;j++)
+            {
+                if(nums[i-1]<=j)
+                {
+                    d[i][j]=(d[i-1][j-nums[i-1]] || d[i-1][j]);
+                }
+                else
+                {
+                    d[i][j]=d[i-1][j];
+                }
+            }
+        }
+        return d[n][sum];
+    }
+      
+public:
+    bool canPartition(vector<int>& nums) {
+        long long int sum=0;
+        for(auto it:nums)
+        {
+          sum+=it;  
+        }
+        if(sum%2!=0)
+           return false;
+        else
+        {
+            bool d[201][20001];
+            return dp(sum/2,nums,nums.size(),d); 
+        }
+    }
+};
+
+//Time Complexity: O(N*K) +O(N)
