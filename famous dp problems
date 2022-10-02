@@ -1,0 +1,111 @@
+Q.1
+Given a string S, the task is to count number of subsequences of the form aibjck, where i >= 1, j >=1 and k >= 1.
+Note: 
+1. Two subsequences are considered different if the set of array indexes picked for the 2 subsequences are different.
+2.  For large test cases, the output value will be too large, return the answer MODULO 10^9+7
+Soln :
+//{ Driver Code Starts
+//Initial template for C++
+#include<bits/stdc++.h>
+using namespace std;
+// } 
+//User function template 
+class Solution{
+  public:
+    // s : given string
+    // return the expected answer
+    int fun(string &s) {
+        //code here
+         int a=0,b=0,c=0;
+        int mod = 1000000007;
+        for(int i=0;i<s.length();i++){
+            char ch = s.charAt(i);
+            // formula is (2n-1) here we use 2(n-1)+1 which gives same result
+            if(ch=='a')
+                a=(1+(2*a)%mod)%mod; 
+            else if(ch=='b')
+                b=(a+(2*b)%mod)%mod;
+            else
+                c=(b+(2*c)%mod)%mod;
+        }
+        return c;
+    }
+};
+
+//{ Driver Code Starts.
+ 
+int main()
+ {
+    int t;
+    cin>>t;
+    while(t--) {
+        string s;
+        cin>>s;
+        Solution obj;
+        cout<<obj.fun(s)<<endl;
+    }
+	return 0;
+}
+// }
+
+  Q.2 
+  Given an array nums[] of size n, where nums[i] denotes the number of characters in one word. Let K be the limit on the number of characters that can be put in one line (line width). Put line breaks in the given sequence such that the lines are printed neatly.
+Assume that the length of each word is smaller than the line width. When line breaks are inserted there is a possibility that extra spaces are present in each line. The extra spaces include spaces put at the end of every line except the last one. 
+You have to minimize the following total cost where total cost = Sum of cost of all lines, where cost of line is = (Number of extra spaces in the line)2.
+Soln :
+//{ Driver Code Starts
+//Initial Template for C++
+
+#include<bits/stdc++.h>
+using namespace std;
+
+// } Driver Code Ends
+//User function Template for C++
+
+class Solution {
+public:
+     int dp[501][2001];
+    int f(int i,int curr,vector<int>&nums, int k)
+    {
+        if(i == nums.size())
+            return 0;
+        
+        if(dp[i][curr] != -1)
+            return dp[i][curr];
+            
+        int pick = INT_MAX;   
+        if(nums[i]<=curr)
+        {
+            pick = f(i+1,curr-nums[i]-1,nums,k);
+        }
+        
+        int notPick = (curr+1)*(curr+1) + f(i+1,k-nums[i]-1,nums,k);
+        
+        return dp[i][curr] = min(pick,notPick);
+        
+    }
+    int solveWordWrap(vector<int>nums, int k) 
+    { 
+        // Code here
+        //vector<vector<int>>dp(1001,vector<int>(1001,-1));
+        memset(dp,-1,sizeof(dp));
+        return f(0,k,nums,k);
+    } 
+};
+
+//{ Driver Code Starts.
+int main(){
+	int tc;
+	cin >> tc;
+	while(tc--){
+		int n, k;
+        cin >> n;
+        vector<int>nums(n);
+        for (int i = 0; i < n; i++)cin >> nums[i];
+        cin >> k;
+        Solution obj;
+        cout << obj.solveWordWrap(nums, k) << endl;
+	}
+	return 0;
+}
+// } 
