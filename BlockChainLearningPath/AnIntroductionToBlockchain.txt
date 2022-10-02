@@ -1,0 +1,105 @@
+
+          .............................An Introduction to Blockchain...............................
+
+Brief History
+It is worth noting that Bitcoin was not the first, nor the last, attempt at developing a digital currency (also referred to as cryptocurrency) and the blockchain. Several attempts existed in some form in the early 1980s and continue to evolve today:
+
+1983: e-Cash concept proposed by David Chaum, a computer scientist.
+1990: DigiCash, founded by David Chaum, attempted to operationalize the e-Cash concept. Bankruptcy followed in 1998.
+1997: Hashcash invented by Adam Back, a computer scientist. It is similar to the underlining technology Bitcoin uses but less secure.
+1998: B-money and Bit Gold proposals created by Wei Dai, a computer engineer, and Nick Szabo, a computer scientist and legal scholar, respectively. The proposals have not been operationalized.
+Presently, over 1,600 digital currencies using blockchain are in circulation. Some critics see these virtual currencies as speculative assets, while others suggest they are good investments. Regardless, the underlying technology—the blockchain—is relevant to accountants and auditors alike.
+
+
+How does the Blockchain Work?
+A blockchain is a distributed, peer-to-peer database that hosts a continuously growing number of transactions. Each transaction, referred to as a “block,” is secured through cryptography, timestamped, and validated by every authorized member of the database using consensus algorithms (i.e., a set of rules). A transaction that is not validated by all members of the database is not added to the database. Every transaction is attached to the previous transaction in sequential order, creating a chain of transactions (or blocks). A transaction cannot be deleted or edited, thereby creating an immutable audit trial. A transaction can only be changed by adding another transaction to the chain.
+
+To illustrate this in practice, say that company X wants to send money to company Y to pay an outstanding invoice related to the purchase of software (Exhibit 1). Company X inputs the transaction in the database, thereby creating a block. The block (or transaction) is broadcasted to every authorized member of the network. Once all the members validate the transaction (i.e., approve the payment) a block is then added to the chain of transactions, which provides an immutable and transparent record of the transaction. The money is then transferred from company X to company Y, and the transaction is complete. The security of the blockchain prevents a hacker from acting as an authorized member of the network.
+
+Exhibit 1
+A Blockchain Transaction
+
+
+
+All transactions are replicated across the network of users and then stored in each member’s computer system, enabling a distributed ledger—which may be shared across numerous locations, organizations, or countries.
+
+A distributed ledger may be a public network or a private network. A private distributed ledger requires an invitation to participate in the network and must be validated by a process (i.e., existing members decide on future participants) or by an algorithm. A central authority is not required. In contrast, a public distributed ledger does not require permission to participate in the network. Anyone can join and participate in the network.
+
+What Makes a Distributed Ledger Different?
+The distributed ledger created using blockchain technology is unlike a traditional network, because it does not have a central authority common in a traditional network structure (see Exhibit 2). Decision-making power usually resides with a central authority, who decides in all aspects of the environment. Access to the network and data is subject to the individual responsible for the environment. The traditional database structure therefore is controlled by power.
+
+Exhibit 2
+Traditional Database vs. Distributed Ledger
+
+
+
+This is not to say that a traditional network structure is not effective. Certain business functions may best be managed by a central authority. However, such a network structure is not without its challenges. Transactions take time to process and cost money; they are not validated by all parties due to limited network participation, and they are prone to error and vulnerable to hacking. To process transactions in a traditional network structure also requires technical skills.
+
+In contrast, the distributed ledger is control by rules, not a central authority. The database is accessible to all the members of the network and installed on all the computers that use the database. Consensus between members is required to add transactions to the database. Each transaction is encrypted using an algorithm and a “key” to convert an unencrypted input (i.e., plain text) into an encrypted output (i.e., ciphertext). Accordingly, transactions in a distributed ledger are expected to be:
+
+Processed quickly and at a lower cost
+Validated by all participating members of a network
+Less prone to error
+Virtually hack-proof.
+As with any new technology, CPAs will need to acquire new technical skills to process, review, and audit transactions in a blockchain, the details of which will depend upon the services provided.
+
+Even though blockchain technology is more secure than a traditional database, it is still susceptible to a security breach. In a public network, a group of participants (or participant) with 51% of the computing power may collude to revise transactions in the network. To mitigate of the risk of a “51% attack,” a public network may adopt a different consensus algorithm (e.g., proof-of-stake in lieu of proof-of-work). Using such an algorithm will prevent collusion among members of the network, because the stakeholders of a transaction have an interest to act in a nonmalicious manner.
+
+Alternatively, a firm may adopt a distributed private network, which is more like a traditional transaction ledger. Members will be independent, third-party (e.g., vendors, customers, lenders, external auditor) stakeholders that have no direct interest in colluding with other members. Recent accounting scandals and financial restatements, however, indicate that no system is impervious to collusion. Still, blockchain technology offers a promising platform that is more secure and transparent than the technology we use today.
+
+How Will the Blockchain Transform Accounting Information Systems?
+The blockchain enables the implementation of a system of accounting that requires transaction verification from a neutral third party. A total of three entries will be created, because each party (the two parties involved in the transaction and the intermediary) creates a record for the transaction (Grigg 2005). Such a system is referred to as a “triple-entry” accounting information system.
+
+Dai and Vasarhelyi (“Toward Blockchain-Based Accounting and Assurance,” Journal of Information Systems, vol. 31, no. 3, pp. 5–21, 2017) use an enterprise resource planning (ERP) system and operating cycle transaction to illustrate how the blockchain will enable a triple-entry accounting system. Each account in the double-entry system will have a corresponding blockchain account. Basically, when a company purchases inventory from a supplier on account, a journal entry debiting inventory and crediting accounts payable for “X” amount is entered in the ERP system. A corresponding entry is made simultaneously to the blockchain accounts and ledger using a token. Think of a token as a digital version of a vehicle that is used to record and track transactions from the ERP system to the blockchain accounts and ledger; the same process is undertaken for each transaction. Different types of tokens can be used for different types of events. A smart contract can be encoded with an obligation token to execute a payment once certain conditions are met (e.g., the payment due date has been reached).
+
+Smart contracts (also called digital contracts) are contracts written into lines of computer code used to program the blockchain. They facilitate the autonomous execution of pre-specified terms based on future conditions and activities. Smart contracts encoded with accounting and business rules could efficiently control the recording process. The following are examples of tasks smart contracts can execute:
+
+Record transactions that adhere to accounting standards by recording sales after the shipment of goods.
+Manage bond and loan covenants by monitoring the balance in company accounts and issuing alerts when balances do not meet prescribed thresholds.
+Facilitate automatic confirmation of inventory purchased on credit.
+Determine obligation, ownership, amount, due date, and amount paid by matching a supplier’s accounts receivable balance to a customer’s accounts payable balance.
+Execute payment.
+Issue discounts for early payments.
+Although blockchain technology has the potential to transform the accounting process, the development of accounting-specific systems using the technology still remains in the experimental phase. A CB Insights research brief (https://bit.ly/3vEY3vX) indicates how U.S. and non-U.S. large public and private companies, governments, and nonprofit organizations are piloting systems using blockchain technology. Some of the initiatives involve accounting transactions (e.g., payments); however, none of the initiatives involve the development of a holistic accounting system using blockchain technology.
+
+Even so, a wide range of approaches have emerged that may lead to block-chain accounting systems (see Exhibit 3). These approaches range from IT services that use a build-on-request approach to special application programming interfaces (API) that permit an institution’s ERP system to communicate with a blockchain application. One start-up is developing an accounting-specific system using blockchain technology, while another develops workflow solutions using distributed ledger technology that can be employed to develop a blockchain accounting system.
+
+Exhibit 3
+Blockchain System Development Approaches
+
+Approach; How It's Done; Examples IT Services; Build on Request; ConsenSys Blockchain First; Develop using the tools provided by the blockchain; Ethereum, Bitcoin Development Platforms; Tools for IT Professionals; ERIS, Tendermint, Hyperledger Vertical Solutions; Industry Specific; Axoni, Chain, R3, itBit, Clearmatics Special APIs and Overlays; DIY building blocks; Nlockstack, Factom, Open Assets, Tierion
+Auditchain GmbH (https://auditchain.finance), a Switzerland-based private company, touts itself as the “world’s first decentralized continuous audit and real-time reporting ecosystem for enterprise and token statistics disclosure.” The company’s offering enables the real-time presentation of financial statements and audit analytics. Digital Assets Holdings, LLC (https://www.digitalasset.com), a U.S.-based private company founded in 2014, provides enterprise solutions that offer “an intuitive smart-contract programming language used to digitize multiparty agreements and automate transactions in a precise and secure manner.” They build solutions based on distributed ledger technology that synchronize multiparty workflows that reduce operational costs and risks. These companies offer cloud-based public and private networks.
+
+Although these technology start-ups promise lower transaction costs and auditing costs, pinning down the costs of implementation and associated savings remains elusive given the nascent stage of the technology.
+
+How Will Blockchain Technology Transform the Profession?
+Blockchain technology enables a distributed ledger that shares transactions with all the members of a network, requires unanimous approval of all transactions, replicates all transactions across the network of users, and stores all transactions in each member’s computer system (see Exhibit 4).
+
+Exhibit 4
+Distributed Ledger
+
+
+
+Blockchain technology has two core qualities that make it novel and powerful—a distributed ledger and immutable transactions. For the accounting profession, these qualities translate to:
+
+Better data quality. Transaction verification by all members of the network reduces errors.
+Less fraud. An immutable audit trail lessens opportunities for earnings manipulation.
+Enhanced financial reporting quality. Access by all members of the network enhances transparency.
+Timeliness of data. Real-time reporting of accounting data.
+Embedded controls of transactions. Smart contracts efficiently control the recording process.
+Increased trust. The immutable nature of transactions increases verifiability.
+More analysis. Data analytics can be used to uncover anomalies.
+What Are the Challenges with Applying Blockchain Technology?
+While blockchain technology appears to have transformative qualities that will have promising implications for the profession, several challenges will delay its adoption:
+
+Blockchain accounting systems. These systems are in the experimental stage.
+System design. Organizations will need to determine the number of roles and level of involvement of each role in the transaction validation process, given the voluminous amounts of transactions processed each year.
+Technological requirements. Companies will need larger storage systems to backup transactions, wider bandwidth to transmit data, and greater computational power.
+Adoption time frame and rate. The technology requires substantive resources to implement and a lack of awareness and understanding undermine the rate of adoption.
+Training. Professionals will require special skills to design smart contracts and audit smart contracts and the blockchain. Data analytics skills will also be required.
+Regulation. Lack of appropriate regulatory guidance and new or revised standards.
+Privacy concerns. Adoption of new or revised access and security protocols will be required to secure data.
+What Does it Mean for the Profession?
+Blockchain technology proposes an alternative accounting information system that mitigates the challenges faced by the current double-entry system and transforms the technological skill set and focus of the profession. It promises to provide better data quality, increase financial reporting transparency, and provide real-time reporting in an environment that increases trust and lessens the opportunity for fraud. CPAs will need to acquire a working knowledge of the blockchain and smart contracts to navigate in this new triple-entry accounting environment. This emerging and disruptive technology also promises to alter the accounting professional’s perspective, from transaction-focused to analytical.
+
+New technologies have traditionally faced adoption challenges (e.g., EDP and ERP systems). Therefore, it is not surprising that organizations have not yet embraced blockchain technology in general, and distributed ledger technology specifically. It’s not clear how long organizations will take to adopt block-chain and alternative accounting information systems due to the numerous aforementioned challenges. Only time will tell. In the interim, CPAs should commit to learn about the technology, experiment with it and participate in its innovation.
