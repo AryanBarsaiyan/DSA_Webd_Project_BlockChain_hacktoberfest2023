@@ -1,0 +1,1 @@
+{"name":"Local: sort_a_stack","url":"d:\\C++\\Stack\\sort_a_stack.cpp","tests":[{"id":1660393809916,"input":"2\n6\n1 2 2 9 7 6\n5\n5 4 1 2 3","output":"9 7 6 2 2 1 \n5 4 3 2 1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\C++\\Stack\\sort_a_stack.cpp","group":"local","local":true}

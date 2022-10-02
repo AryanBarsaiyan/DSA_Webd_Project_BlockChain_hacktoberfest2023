@@ -1,0 +1,1 @@
+{"name":"Local: max_value_in_subarray","url":"d:\\C++\\Segment Tree\\max_value_in_subarray.cpp","tests":[{"id":1664363702497,"input":"10\n8 2 5 1 4 5 3 9 6 10\n1 0 9\n1 1 5 \n2 3 9\n2 4 15\n1 1 8\n-1","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\C++\\Segment Tree\\max_value_in_subarray.cpp","group":"local","local":true}
