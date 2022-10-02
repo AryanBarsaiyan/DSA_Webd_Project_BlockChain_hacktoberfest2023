@@ -3,6 +3,14 @@
 • EVERYONE IS WELCOME✨    
 • Contribute anything in DSA 🙌
 
+## Rules  
+
+*Not accepting CPP/C dsa codes*     
+Alternative ->   
+1)Create a page using html & css Add dsa problem statement and solution in that    
+2)You can contribute in python and java OR
+  Ask for a issue assign      
+3)Make sure follow me & star the repo
 
 
 ### Why contribute to this repository
