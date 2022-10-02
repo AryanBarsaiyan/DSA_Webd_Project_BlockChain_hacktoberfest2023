@@ -1,0 +1,65 @@
+h1,h2,h3,h4,ul,li,p{
+    margin : 0;
+    padding : 0;
+}
+
+img {
+    max-width : 100%;
+}
+
+body{
+    font-family : Arial;
+    color : #333;
+}
+
+header{
+    padding : 50px;
+    background-color: cornflowerblue;
+    text-align : center;
+    color : white;
+    margin-bottom : 20px;
+}
+
+main{
+    max-width : 800px;
+    padding : 20px;
+    margin : auto;
+    display : flex;
+    justify-content:space-between;
+}
+
+main form{
+    width : 40%;
+}
+
+main article{
+    width : 45%;
+}
+
+h1,h2,h3,h4,p{
+    margin-bottom : 1em;
+}
+
+#title{
+    text-align : center;
+}
+
+label{
+    display: block;
+    margin-bottom: .5em;
+}
+
+input, textarea, #details button{
+    display:block;
+    width : 100%;
+    margin-bottom : 1em;
+    border : 1px solid #666;
+    padding : 10px;
+    box-sizing: border-box;
+}
+
+.card{
+    padding : 20px;
+    background-color: #efefef;
+    margin-bottom : 20px;
+}
