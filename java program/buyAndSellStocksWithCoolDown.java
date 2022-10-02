@@ -1,6 +1,6 @@
 import java.util.*;
 
-class aryan{
+class buyAndSellStocksWithCoolDown{
 static int getAns(int[] Arr, int ind, int buy, int n, int[][] dp ){
 
     if(ind>=n) return 0; //base case
