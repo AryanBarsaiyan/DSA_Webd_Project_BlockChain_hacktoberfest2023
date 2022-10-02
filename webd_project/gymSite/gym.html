@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aryan Fitness Club</title>
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="New Folder/Gym2.css">
+<style>
+    /* CSS Reset */
+    *{
+        /* box-sizing: border-box; */
+    }
+    body{
+        font-family: 'Baloo Bhai 2', cursive;
+        color: white;
+        margin: 0px;
+        padding: 0px;
+        background-image: url("https://images.pexels.com/photos/949126/pexels-photo-949126.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+    }
+    .left{
+        display: inline-block;
+        position: absolute;
+        left: 34px;
+        top: 20px;
+        /* border: 2px solid red; */
+    }
+    .left img{
+        width: 170px;
+        height: 50px;
+    }
+    .mid{
+        display: block;
+        width: 33%;
+        margin: 20px auto;
+        /* border: 2px solid green; */
+    }
+    .right{
+        position: absolute;
+        right: 34px;
+        top: 20px;
+        display: inline-block;
+        /* border: 2px solid yellow; */
+    }
+    .navbar{
+        display: inline-block;
+    }
+    .navbar li{
+        display: inline-block;
+        font-size: 15px;
+    }
+    .navbar li a{
+        color: white;
+        text-decoration: none;
+        padding: 10px 10px;
+    }
+    .navbar li a:hover,.navbar li a:active{
+        text-decoration: underline;
+        color: grey;
+    }
+    .btn{
+        font-family: 'Baloo Bhai 2', cursive;
+        margin: 0px 9px;
+        background-color: black;
+        color: white;
+        padding: 6px 14px;
+        border: 2px solid grey;
+        border-radius: 5px;
+        font-size: 15px;
+        cursor: pointer;
+    }
+    .btn:hover{
+        background-color: grey;
+    }
+    .container{
+        position: absolute;
+        right: 0px;
+        top: 20px;
+        display: inline-block;
+        border: 2px solid white;
+        margin: 106px 35px;
+        padding: 85px;
+        width: 33%;
+        border-radius: 25px;
+    }
+    .container h1{
+        text-align: center;
+    }
+    .container h3{
+        text-align: center;
+        line-height: 0px;
+        /* font-size: 14px; */
+    }
+    .form-group input{
+        font-family: 'Baloo Bhai 2', cursive;
+        text-align: center;
+        display: block;
+        width: 508px;
+        padding: 1px;
+        border: 2px solid black;
+        margin: 3px auto;
+        font-size: 15px;
+        border-radius: 8px;
+    }
+    .container button{
+        display: block;
+        width: 105%;
+        margin: 20px auto;
+    }
+</style>
+<body>
+    <header class="header">
+        <!-- left box for logo -->
+        <div class="left">
+            <!-- I am left box -->
+            <img src="https://img.freepik.com/premium-vector/fitness-logo_25327-144.jpg?w=2000" alt ="">
+            <!-- <div>Aryan Fitness Club</div> -->
+        </div>
+        <!-- mid box for navbar -->
+        <div class="mid">
+            <!-- I am mid box -->
+            <ul class="navbar">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About Us<a></li>
+                <li><a href="https://google.com" target="_blank">Fitness Calci</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <!-- right box for button -->
+        <div class="right">
+            <!-- I am right box -->
+            <button class="btn">Call Us</button>
+            <button class="btn">Email Us</button>
+        </div>
+    </header>
+    <div class="container">
+        <!-- I am a container -->
+        <h1>Welcome to Aryan Fitness Club</h1>
+        <h3>Patna's most prominent gym</h3>
+        <form action = "noaction.php">
+            <div class="form-group">
+                <label for="name">Name : </label>
+                <input type="text" class="form-control" id="ur_name" placeholder="Enter your name">
+            </div>
+            <div class = "form-group">
+                <label for="name">Age : </label>
+                <input type="number" class="form-control" id="ur_age" placeholder="Enter your age">
+            </div>   
+            <div class = "form-group">
+                <label for="name">Email Id : </label>
+                <input type="email" class="form-control" id="ur_email" placeholder="Enter your email id">
+            </div>
+            <div class = "form-group">
+                <label for="name">Mobile no : </label>
+                <input type="number" class="form-control" id="ur_no" placeholder="Enter your mobile no">
+            </div>
+            <button class="btn">Submit</button>
+        </form>
+
+    </div>
+</body>
+</html>
