@@ -1,0 +1,118 @@
+/* body */
+body {
+  background-image: url("images/pattern-background-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: hsl(225, 100%, 94%);
+  text-align: center;
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+/* heading */
+h1 {
+  font-weight: 900;
+}
+
+/* container */
+.container {
+  width: 400px;
+  height: 600px;
+  margin: auto;
+  margin-top: 100px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+/* illustration-image */
+.image {
+  width: 400px;
+  border-radius: 10px 10px 0 0;
+}
+
+/* paragraph - text */
+.text {
+  margin: 0 10%;
+  color: hsl(224, 23%, 55%);
+  font-size: 16px;
+}
+
+.row {
+  width: 320px;
+  height: 70px;
+  margin: 5% 10%;
+  background-color: hsl(225, 100%, 98%);
+  border-radius: 10px;
+  display: block;
+}
+
+/* music icon */
+.icon {
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.annual {
+  font-weight: 700;
+  position: relative;
+  bottom: 30px;
+}
+
+/* price */
+.price {
+  color: hsl(224, 23%, 55%);
+  position: relative;
+  right: 90px;
+}
+
+.change {
+  position: relative;
+  bottom: 20px;
+  right: 10px;
+  font-weight: 700;
+  text-decoration: underline;
+  color: hsl(245, 75%, 52%);
+  cursor: pointer;
+}
+
+.change:hover {
+  opacity: 0.7;
+  text-decoration: none;
+}
+
+/* button */
+.btn {
+  width: 320px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  background-color: hsl(245, 75%, 52%);
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.btn:hover {
+  opacity: 0.7;
+}
+
+.cancel {
+  cursor: pointer;
+  font-weight: 700;
+  color: hsl(224, 23%, 55%);
+}
+
+.cancel:hover {
+  color: #000;
+}
+
+/* attributtes */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

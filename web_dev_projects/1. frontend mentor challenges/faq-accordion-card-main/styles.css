@@ -1,0 +1,125 @@
+body {
+  margin: 0;
+  background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  font-size: 12px;
+  font-family: 'Kumbh Sans', sans-serif;
+  color: hsl(240, 6%, 50%);
+  font-weight: 400;
+}
+
+h1 {
+  color: hsl(238, 29%, 16%);
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+hr {
+  color: hsl(240, 5%, 91%);
+}
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  border-radius: 20px;
+  margin: 6% 15%;
+  overflow: hidden;
+}
+.col-image{
+width: 50%;
+}
+.col-text {
+  width: 50%;
+  margin: 5% 5%;
+}
+.mobile, .pattern-mobile {
+  display: none;
+}
+
+.desktop {
+  position: relative;
+  top: 100px;
+  right: 80px;
+  z-index: 2;
+}
+.box {
+  position: relative;
+    z-index: 3;
+}
+
+.pattern {
+  position: relative;
+  right: 585px;
+  bottom: 630px;
+  z-index: 1;
+}
+
+
+.text-button {
+  background: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+
+/* .qtext{
+  color: hsl(238, 29%, 16%);
+  font-weight: 700;
+} */
+.qtext:hover {
+  color: hsl(14, 88%, 65%);
+}
+
+.text-button:focus {
+  outline: none;
+}
+
+.btn {
+  float: right;
+}
+
+.arrow {
+  transform: rotate(180deg);
+}
+
+@media (max-width: 1170.40px) {
+  .container {
+  flex-direction: column;
+
+  overflow: visible;
+  margin: 30% 5%;
+  }
+
+  .box, .desktop, .pattern {
+    display: none;
+  }
+  h1{
+    text-align: center;
+  }
+.col-image{
+  width: auto;
+  height: 20vh;
+}
+  .col-text {
+    text-align: left;
+    width: auto;
+    height: 60%;
+  }
+
+  .mobile, .pattern-mobile {
+    display: block;
+  }
+
+  .mobile {
+    display: block;
+    margin: 0 10%;
+    position: relative;
+    bottom: 105px;
+  }
+  .pattern-mobile {
+    margin: auto;
+    position: relative;
+    bottom: 180px;
+  }
+}
