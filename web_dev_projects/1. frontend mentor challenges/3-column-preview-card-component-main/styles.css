@@ -1,0 +1,70 @@
+body{
+background-color: hsl(0, 0%, 95%);
+}
+h1{
+  font-family: 'Big Shoulders Display', cursive;
+  color: hsl(0, 0%, 95%);
+  margin: 0px 50px;
+}
+p{
+  width: 65%;
+  text-align: left;
+  margin: 30px 50px 0;
+  font-size: 15px;
+  font-family: 'Lexend Deca', sans-serif;
+  color: hsla(0, 0%, 100%, 0.75);
+}
+.flex-container{
+  display: flex;
+  margin: 7% 18%;
+}
+.col1,.btn1:hover{
+  background-color: hsl(31, 77%, 52%);
+}
+.col2,.btn2:hover{
+  background-color: hsl(184, 100%, 22%);
+}
+.col3,.btn3:hover{
+  background-color: hsl(179, 100%, 13%);
+}
+.car{
+  margin: 40px 50px 30px;;
+}
+.btn1,.btn2,.btn3{
+  width: 150px;
+  height: 50px;
+  border-radius: 50px;
+  border-style: none;
+  margin: 70px 50px 50px;
+  cursor: pointer;
+  font-size: 15px;
+  font-family: 'Lexend Deca', sans-serif;
+
+}
+.btn1{
+  color: hsl(31, 77%, 52%);
+}
+.btn2{
+  color: hsl(184, 100%, 22%);
+}
+.btn3{
+  color: hsl(179, 100%, 13%);
+}
+.btn1:hover,.btn2:hover,.btn3:hover{
+  color: hsl(0, 0%, 95%);
+  border: 2px solid white;
+}
+
+@media (max-width: 1028px) {
+.flex-container{
+  flex-direction: column;
+}
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+ }
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

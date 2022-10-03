@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | FAQ Accordion Card</title>
+
+</head>
+
+<body>
+  <main class="flex-container">
+    <div class="col-image">
+      <img class="desktop" src="images/illustration-woman-online-desktop.svg" alt="">
+      <img class="pattern" src="images/bg-pattern-desktop.svg" alt="">
+      <img class="mobile" src="images/illustration-woman-online-mobile.svg" alt="">
+      <img class="box" src="images/illustration-box-desktop.svg" alt="">
+      <img class="pattern-mobile" src="images/bg-pattern-mobile.svg" alt="">
+    </div>
+
+    <div class="col-text">
+      <h1>FAQ</h1>
+
+      <button class="text-button" type="button" name="button">
+        <p class="qtext" data-toggle="collapse" data-target="#text1">How many team members can I invite?<span><img class="btn" src="images\icon-arrow-down.svg" alt=""></span></p>
+      </button>
+      <p class="collapse" id="text1">You can invite up to 2 additional users on the Free plan. There is no limit on
+        team members for the Premium plan.</p>
+
+      <hr>
+
+      <button class="text-button" type="button" name="button">
+        <p class="qtext" data-toggle="collapse" data-target="#text2">What is the maximum file upload size?<span><img class="btn" src="images\icon-arrow-down.svg" alt=""></span></p>
+      </button>
+      <p class="collapse" id="text2">No more than 2GB. All files in your account must fit your allotted storage space.</p>
+
+      <hr>
+
+      <button class="text-button" type="button" name="button">
+        <p class="qtext" data-toggle="collapse" data-target="#text3">How do I reset my password?<span><img class="btn" src="images\icon-arrow-down.svg" alt=""></span></p>
+      </button>
+      <p class="collapse" id="text3">Click “Forgot password” from the login page or “Change password” from your profile page.
+        A reset link will be emailed to you.</p>
+
+      <hr>
+
+      <button class="text-button" type="button" name="button">
+        <p class="qtext" data-toggle="collapse" data-target="#text4">Can I cancel my subscription?<span><img class="btn" src="images\icon-arrow-down.svg" alt=""></span></p>
+      </button>
+      <p class="collapse" id="text4">Yes! Send us a message and we’ll process your request no questions asked.</p>
+
+      <hr>
+
+      <button class="text-button" type="button" name="button">
+        <p class="qtext" data-toggle="collapse" data-target="#text5">Do you provide additional support?<span><img class="btn" src="images\icon-arrow-down.svg" alt=""></span></p>
+      </button>
+      <p class="collapse" id="text5">Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
+
+      <hr>
+    </div>
+  </main>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="index.js" charset="utf-8"></script>
+</body>
+
+</html>

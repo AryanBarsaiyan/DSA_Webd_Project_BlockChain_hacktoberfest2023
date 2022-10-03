@@ -1,0 +1,62 @@
+body{
+  background-color: hsl(185, 75%, 39%);
+  background-image: url("images/bg-pattern-top.svg"), url("images/bg-pattern-bottom.svg");
+  background-position:-50% 140% , 150% -90%;
+  background-repeat: no-repeat , no-repeat;
+  background-size: auto;
+  text-align: center;
+  font-family: 'Kumbh Sans', sans-serif;
+  color: hsl(0, 0%, 59%);
+}
+p{
+  position: relative;
+  bottom: 50px;
+}
+hr{
+  color: hsl(229, 23%, 23%);
+  position: relative;
+  bottom: 50px;
+}
+
+.container{
+  width: 350px;
+  height: 400px;
+  margin: 10% auto 5%;
+  background-color: #fff;
+  border-radius: 20px;
+}
+.image{
+  width: 350px;
+  border-radius: 20px 20px 0 0;
+}
+.victor{
+  border-radius: 100%;
+  border: 5px solid white;
+  position: relative;
+  bottom: 50px;
+}
+.text{
+  margin: 0;
+  font-weight: 700;
+  color: #000;
+  margin-right: 5px;
+}
+.count{
+  font-weight: 700;
+  color: #000;
+  word-spacing: 50px;
+}
+.insta{
+  word-spacing: 40px;
+}
+.likes{
+  position: relative;
+  right: 8px;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+ }
