@@ -1,0 +1,127 @@
+body {
+  margin: 20px;
+}
+
+.body_block {
+  user-select: none;
+}
+
+.container {
+  max-width: 400px;
+  margin: 0 auto 0 auto;
+  padding: 10px;
+  box-shadow: 0px 0px 43px 17px rgba(153, 153, 153, 1);
+}
+
+#display {
+  text-align: right;
+  height: auto;
+  border-radius: 4%;
+  padding: 10px;
+  font-size: 25px;
+  line-height: normal;
+}
+
+.buttons {
+  display: grid;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.buttons > div {
+  border-radius: 40%;
+}
+
+.button {
+  line-height: 80px;
+  text-align: center;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+#equal {
+  background-color: rgb(85, 85, 255);
+  color: white;
+}
+
+.button:hover {
+  background-color: #323330;
+  color: white;
+  transition: 0.5s ease-in-out;
+}
+
+.hide {
+  display: none;
+}
+
+.unhide {
+  display: inline;
+}
+
+#rad {
+  margin-left: 5px;
+  margin-top: 0px;
+}
+
+#dot {
+  align-self: flex-end;
+  height: 50px;
+  display: inline;
+}
+
+#dot:hover {
+  cursor: pointer;
+}
+
+#theme,
+#history {
+  padding: 30px;
+  display: inline;
+}
+
+#theme_option {
+  padding-top: 10px;
+  padding-left: 33px;
+}
+
+#th1,
+#th2 {
+  max-height: 50px;
+  max-width: 50px;
+  height: auto;
+  width: auto;
+}
+
+#th1,
+#th2,
+#history,
+:hover {
+  cursor: pointer;
+}
+
+.th1_body {
+  background-color: #0e1011;
+  color: white;
+}
+
+.th1_dis {
+  border: 4px solid rgb(255, 255, 255);
+}
+
+.th1_btn {
+  border: 0.5px solid rgba(255, 255, 255, 0.575);
+}
+
+.th2_body {
+  background-color: #ffffff;
+  color: black;
+}
+
+.th2_dis {
+  border: 4px solid rgb(0, 0, 0);
+}
+
+.th2_btn {
+  border: 0.5px solid rgb(0, 0, 0);
+}

@@ -1,0 +1,74 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Calculator</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body id="body" class="th2_body body_block">
+    <!-- Headings -->
+    <h2 id="theme">Themes</h2>
+    <h2 id="history" onclick="historyView()">History</h2>
+    <h2 id="theme_option">
+      <img id="th1" onclick="th1()" src="dark.png" />
+      <img id="th2" onclick="th2()" src="light.png" />
+    </h2>
+    <section class="head">
+      <div class="container hide" id="history_log"></div>
+      <!-- end -->
+      <!-- Calculator -->
+      <div class="container" id="calculator">
+        <div contenteditable="true" class="th2_dis" id="display"></div>
+        <h2 onclick="show()" id="dot">···</h2>
+        <h5 onclick="rad_deg()" id="rad" class="hide">rad</h5>
+        <div id="hide" hidden></div>
+        <div class="buttons">
+          <div class="button th2_btn">C</div>
+          <div class="button th2_btn">(</div>
+          <div class="button th2_btn">)</div>
+          <div onclick="back()" class="button th2_btn">←</div>
+          <div class="button th2_btn bottom">7</div>
+          <div class="button th2_btn bottom">8</div>
+          <div class="button th2_btn bottom">9</div>
+          <div class="button th2_btn bottom">&#215;</div>
+          <div class="button th2_btn bottom">4</div>
+          <div class="button th2_btn bottom">5</div>
+          <div class="button th2_btn bottom">6</div>
+          <div class="button th2_btn bottom">&#8722;</div>
+          <div class="button th2_btn bottom">1</div>
+          <div class="button th2_btn bottom">2</div>
+          <div class="button th2_btn bottom">3</div>
+          <div class="button th2_btn bottom">+</div>
+          <div class="button th2_btn up hide">sin</div>
+          <div class="button th2_btn up hide">cos</div>
+          <div class="button th2_btn up hide">tan</div>
+          <div class="button th2_btn up hide">ln</div>
+          <div class="button th2_btn up hide">sin<sup>-1</sup></div>
+          <div class="button th2_btn up hide">cos<sup>-1</sup></div>
+          <div class="button th2_btn up hide">tan<sup>-1</sup></div>
+          <div class="button th2_btn up hide">log</div>
+          <div class="button th2_btn up hide">e</div>
+          <div class="button th2_btn up hide">√</div>
+          <div class="button th2_btn up hide">∛</div>
+          <div class="button th2_btn up hide">&pi;</div>
+          <div class="button th2_btn up">.</div>
+          <div class="button th2_btn">0</div>
+          <div class="button th2_btn">&#247;</div>
+          <div id="equal" class="button th2_btn">=</div>
+        </div>
+      </div>
+    </section>
+    <script src="index.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
