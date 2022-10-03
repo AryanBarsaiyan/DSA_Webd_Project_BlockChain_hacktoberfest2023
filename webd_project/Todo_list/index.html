@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Monoton&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="todo.svg">
+    <title>TODO List</title>
+  </head>
+  <body>
+    <div class="app">
+      <div class="heading">
+        <div class="heading__title">ToDo-List</div>
+      </div>
+      <div class="new">
+        <form class="new__form">
+          <input
+            class="new__input"
+            type="text"
+            name="new_text"
+            placeholder="What are your plans for today ?"
+          />
+        </form>
+        <span class="new__submit material-icons">control_point</span>
+      </div>
+      <div class="todo">
+        <div>Yours Todo List for today</div>
+        <ul class="todo__list">
+          <li class="todo__item"></li>
+        </ul>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
