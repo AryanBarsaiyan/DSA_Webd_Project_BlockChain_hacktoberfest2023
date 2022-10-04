@@ -1,0 +1,145 @@
+html { 
+    height: 100%; 
+    min-height: 800px;
+}
+
+body {
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    background-color: #09090b;
+    background: url(https://images.unsplash.com/photo-1585435465945-bef5a93f8849?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80) ;
+    background-position-y:top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.app {
+    margin: 50px;
+    padding: 30px;
+    height: 100%;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'Montserrat', sans-serif;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+}
+
+.heading__title {
+    font-family: 'Impact', cursive;
+    align-content: center;
+    font-size: 4rem;
+    color: black;
+    display: flex;
+    justify-content: center;
+}
+
+.heading__sub-title {
+    font-size: 1rem;
+}
+
+.todo {
+    margin: 20px;
+    padding: 20px;
+    height: 100%;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    background-color: #f4a701;
+    border-radius: 10px;
+}
+
+.todo div{
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 20px;
+}
+
+.todo::-webkit-scrollbar {    width: 10px;}
+.todo::-webkit-scrollbar-track {background: #f4a701;}
+.todo::-webkit-scrollbar-thumb {background: rgb(233, 209, 173);}
+.todo::-webkit-scrollbar-thumb:hover {background: #555;}
+
+.todo__list {
+    list-style: none;
+    padding: 0;
+}
+
+.todo__item {
+    margin: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todo__item:hover {
+    cursor: pointer;
+}
+
+.todo__icon-tick {
+    font-size: 2rem;
+    min-width: 50px;
+}
+
+.todo__text {
+    vertical-align: middle;
+    font-size: 1.6rem;
+    flex-wrap: nowrap;
+}
+
+.todo__text.cross-out {
+    text-decoration: line-through;
+}
+
+.todo__text {
+    cursor: pointer;
+}
+.todo__icon-delete {
+    font-size: 2rem;
+    min-width: 50px;
+    text-align: right;
+}
+.todo__icon-delete {
+    cursor: pointer;
+}
+
+.new {
+    margin: 20px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #f4a701;
+    border-radius: 10px;
+}
+
+.new__form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border: none;
+}
+
+.new__input {
+    vertical-align: middle;
+    margin: 0;
+    width: 95%;
+    background: transparent;
+    font-size: 1.6rem;
+    outline: none;
+    border: none;
+    outline-width: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+}
+
+.new__submit {
+    font-size: 2rem;
+    min-width: 50px;
+    text-align: right;
+}
+
+.new__submit:hover {
+    cursor: pointer;
+}
