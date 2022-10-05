@@ -1,0 +1,294 @@
+
+--Stack in Python--
+The size of stack is fixed or variable.
+
+Stack is a container which is open at one end and close at another end,like a container.
+
+It is a vertical datastructure.
+
+We can't extract or remove the data until it's previous data can't be extracted or removed.
+
+A stack is a linear data structure that stores items in a Last-In/First-Out (LIFO) or First-In/Last-Out (FILO) manner.
+
+
+
+Stack in Python can be implemented by the following ways:
+Using list
+Using queue
+Using Collections deque
+
+
+1. Using list
+
+a)class Stack:
+  def __init__(self,size):
+    self.item=[]  
+    self.size=size
+  def push(self,newval):
+    self.item.append(newval)
+
+  def view(self):
+    print(self.item)
+
+s1=Stack(5)
+s1.view()
+
+b)class Stack:
+  def __init__(self,size):
+    self.item=[]  
+    self.size=size
+  def push(self,newval):
+    self.item.append(newval)
+
+  def view(self):
+    print(self.item)
+
+s1=Stack(5)
+s1.push(4)
+s1.push(2)
+s1.push(6)
+s1.push(8)
+s1.push(1)
+s1.push(7)
+s1.view()
+
+c)class Stack:
+  def __init__(self,size):
+    self.item=[]  
+    self.size=size
+  def push(self,newval):
+    if len(self.item)<=self.size:
+      self.item.append(newval)
+    else:
+      print("stack is full")
+
+  def pop(self):
+    if len(self.item)!=0:
+      return self.item.pop()
+    else:
+      print("stack is empty")
+
+  def view(self):
+    print(self.item)
+
+s1=Stack(5)
+s1.push(4)
+s1.push(2)
+s1.pop()
+s1.pop()
+s1.pop()
+s1.view()
+stack is empty
+
+d)class Overflow(Exception):
+  pass
+class Underflow(Exception):
+  pass
+class Stack:
+  def __init__(self,size):
+    self.item=[]  
+    self.size=size
+  def push(self,newval):
+    if len(self.item)<=self.size:
+      self.item.append(newval)
+    else:
+      raise Overflow("Stack is full")
+
+  def pop(self):
+    if len(self.item)!=0:
+      return self.item.pop()
+    else:
+      raise Underflow("Stack is empty")
+
+  def view(self):
+    print(self.item)
+
+s1=Stack(1)
+s1.push(4)
+s1.pop()
+s1.pop()
+s1.view()
+2. Using queue
+
+a)import queue
+stack=queue.LifoQueue(maxsize=5)
+stack.put(5)
+stack.put(8)
+stack.put(7)
+stack.put(4)
+stack.put(2)
+stack.get()
+print(stack.queue)
+
+b)import queue
+stack=queue.LifoQueue(maxsize=5)
+stack.put(5)
+stack.put(8)
+stack.put(7)
+stack.put(4)
+stack.put(2)
+stack.put(9) #It will enter in the contionous loop as son as the stack is full,this condition is known as "PUT WAIT".
+print(stack.queue)
+
+c)import queue
+stack=queue.LifoQueue(maxsize=5)
+stack.put(5)
+stack.put(8)
+stack.put(7)
+stack.put(4)
+stack.put(2)
+stack.put_n
+print(stack.queue)
+
+d)import queue
+s1=queue.LifoQueue(maxsize=5)
+s1.put(5)
+s1.put(6)
+s1.put(7)
+s1.put(8)
+s1.put(9)
+s1.put_nowait(3)   #throw an error that it is full
+print(s1.queue)
+
+e)import queue
+s1=queue.LifoQueue(maxsize=5)
+s1.put(5)
+s1.put(6)
+print(s1.get())
+print(s1.get())
+print(s1.get_nowait())
+print(s1.queue)
+
+f)import queue
+s1=queue.LifoQueue(maxsize=5)
+s1.put(5)
+s1.put(6)
+print(s1.get())
+print(s1.qsize())
+print(s1.queue)
+
+e)import queue
+s1=queue.LifoQueue(maxsize=5)
+s1.put(5)
+s1.put(6)
+print(s1.full())
+print(s1.queue)
+
+g)import queue
+s1=queue.LifoQueue(maxsize=5)
+s1.put(5)
+s1.put(6)
+print(s1.empty())
+print(s1.queue)
+
+3. Using Collections deque
+
+a)from collections import deque
+s1=deque(maxlen=2)
+s1.append(3)
+s1.append(4)
+s1.append(7)
+print(s1.pop())
+print(s1.pop())
+print(s1.pop())
+print(s1)
+
+
+Application of Stack
+1. Expression Evaluation and Conversion​: Stack is used to evaluate prefix, postfix and infix expressions.
+
+2. String Reversal: Stack is used to reverse a string. We push the characters of string one by one into stack and then pop character from stack.
+
+3. Backtracking: Suppose we are finding a path for solving maze problem. We choose a path and after following it we realize that it is wrong. Now we need to go back to the beginning of the path to start with new path. This can be done with the help of stack.
+
+4. Parenthesis Checking: Stack is used to check the proper opening and closing of parenthesis.
+
+Queue in Python
+Like stack, queue is a linear data structure that stores items in First In First Out (FIFO) manner. With a queue the least recently added item is removed first. A good example of queue is any queue of consumers for a resource where the consumer that came first is served first.
+
+
+
+Operation in queue:
+Enqueue: Adds an item to the queue. If the queue is full, then it is said to be an Overflow condition – Time Complexity : O(1)
+
+Dequeue: Removes an item from the queue. The items are popped in the same order in which they are pushed. If the queue is empty, then it is said to be an Underflow condition – Time Complexity : O(1)
+
+Queue in Python can be implemented by the following ways:
+Using list
+Using queue
+Using Collections deque
+
+
+1. Using list
+
+a)class Overflow(Exception):
+  pass
+class Underflow(Exception):
+  pass
+class Queue:
+  def __init__(self,size):
+    self.size=size
+    self.item=[]
+  def view(self):
+    print(self.item)
+  def Enqueue(self,newvalue):
+    if len(self.item)<self.size:
+      self.item.append(newvalue)
+    else:
+      raise Overflow("queue is full")
+  def Dequeue(self):
+    if len(self.item)>0:
+      return self.item.pop()
+    else:
+      raise Underflow("queue is empty")
+q1=Queue(5)
+q1.view()
+print(q1.Dequeue())
+2. Using queue
+
+a)import queue
+q1=queue.Queue(maxsize=5)
+q1.put(5)
+q1.put(6)
+q1.put(7)
+q1.put(8)
+q1.put(4)
+print(q1.get())
+print(q1.queue)
+
+b)import queue
+q1=queue.Queue(maxsize=5)
+q1.put(5)
+q1.put(6)
+print(q1.get())
+print(q1.get())
+print(q1.get_nowait())
+print(q1.queue)
+
+
+3. Using Collections deque
+
+a)from collections import deque
+q1=deque(maxlen=5)
+q1.append(5)
+q1.append(6)
+print(q1)
+print(q1.popleft())
+print(q1)
+
+Application queue
+1.When data is transferred asynchronously between two processes. eg. IO Buffers.
+
+2.When a resource is shared among multiple consumers. Examples include CPU scheduling, Disk Scheduling.
+
+3.In recognizing palindrome.
+
+4.In shared resources management.
+
+5.Keyboard buffer.
+
+6.Round robin scheduling.
+
+7.Job scheduling.
+
+8.Simulation
