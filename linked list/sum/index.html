@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sum of a linked list in JS </title>
+</head>
+<body>
+    
+    <h2> How to sum all the nodes in a linked list? </h2>
+
+    <br> Answer:
+    <p> 
+        <br>let sum = 0;
+        <br>
+        <br>class Node {
+        <br>    constructor(val) {
+        <br>        this.data = val;
+        <br>        this.next = null;
+        <br>    }
+        <br>}
+        <br>
+        <br>function push(head_ref, new_data) {
+        <br>    let new_node = new Node();
+        <br>    
+        <br>    new_node.data = new_data;
+        <br>    
+        <br>    new_node.next = (head_ref);
+        <br>    
+        <br>    (head_ref) = new_node;
+        <br>    return head_ref;
+        <br>}
+        <br>
+        <br>function sumOfNodes(head) {
+        <br>    if (head == null)
+        <br>    return;
+        <br>    
+        <br>    // recursively traverse the remaining nodes
+        <br>    sumOfNodes(head.next);
+        <br>    
+        <br>    // accumulate sum
+        <br>    sum = sum + head.data;
+        <br>}
+        <br>
+        <br>// utility function to find the sum of nodes
+        <br>function sumOfNodesUtil(head) {
+        <br>    
+        <br>    sum = 0;
+        <br>    
+        <br>    // find the sum of nodes
+        <br>    sumOfNodes(head);
+        <br>    
+        <br>    // required sum
+        <br>    return sum;
+        <br>}
+        <br>
+        <br>let head = null;
+        <br>
+        <br>// create linked list 7.6.8.4.1
+        <br>head = push(head, 7);
+        <br>head = push(head, 6);
+        <br>head = push(head, 8);
+        <br>head = push(head, 4);
+        <br>head = push(head, 1);
+        <br>
+        <br>document.write("Sum of nodes = " +
+        <br>    sumOfNodesUtil(head));
+    </p>
+
+    <script src="./main.js"></script>
+</body>
+</html>
