@@ -1,0 +1,38 @@
+.story{
+    max-width: 600px;
+    background-color: white;
+    margin: auto;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.story {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+
+h6{
+    margin-top: 6px;
+    font-weight: 500;
+    
+}
+
+@media (max-width: 600px){
+    .story{
+        width: 95%;
+    }
+
+    h6{
+        font-size: 9px;
+    }
+}
+
