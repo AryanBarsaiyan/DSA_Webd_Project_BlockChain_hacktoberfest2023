@@ -1,0 +1,73 @@
+.upload{
+    max-width: 600px;
+    background-color: white;
+    margin: auto;
+    border: 1px solid lightgray;
+    border-radius: 2%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    /* height: 120px; */
+    display: flex;
+    flex-direction: column;
+}
+
+.upload_content{
+    width: 57%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.upload_first{
+    padding-left: 25px;
+    padding-right: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+}
+
+.upload_caption{
+    width: 80%;
+    margin: auto;
+    border-radius: 20px;
+    padding-top: 10px;
+}
+
+.upload_caption::placeholder{
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.upload_profile{
+    color: #e60940;
+}
+
+hr{
+    width: 95%;
+    margin: auto;
+    color: gray;
+    margin-top: 7px;
+}
+
+
+@media (max-width: 600px){
+    .upload{
+        width: 95%;
+    }
+
+    .upload_content{
+        width: 75%;
+    }
+
+    .upload_caption{
+        margin-left: 10px;
+    }
+
+    
+}
+
+
+

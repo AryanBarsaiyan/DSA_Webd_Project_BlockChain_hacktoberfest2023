@@ -1,0 +1,203 @@
+*{
+  margin:0;
+}
+
+.app{
+  background-color: #eeebeb;
+  height: 100%;
+}
+
+.app__header{
+  position: sticky;
+  top: 0;
+  background: white;
+  object-fit: contain;
+  padding-left: 75px;
+  padding-right: 75px;
+  padding-top: 5px;
+  border-bottom: 1.3px solid lightgray;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+}
+
+.app__header .app__headerImage {
+  width: 170px;
+}
+
+.searchForm{
+  position: relative;
+  margin: auto;
+  /* width: 30%; */
+}
+
+input{
+  width: 160px;
+  padding: 6px 20px;
+  background: #faf9f9;
+  border: 0.5px solid #b4afaf;
+  border-radius: 3%;
+}
+
+.searchBarInput::placeholder{
+  text-align: center;
+  letter-spacing: 0.04rem;
+  font-size: 12px;
+}
+
+.searchIcon{
+  position: absolute;
+  padding: 2px;
+  color: #858080;
+  display: flex;
+  align-items: center;
+  align-self: center;
+  left: 55px;
+  top: 3px;
+}
+
+
+.modal__headerImage{
+  width: 150px;
+}
+
+.app__signup{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.signup_input{
+  /* margin-top: 20px; */
+}
+
+.signup_input::placeholder{
+  text-align: left !important;
+  font-size: 17px !important;
+  letter-spacing: 0.1rem;
+}
+
+.signInButton{
+  right: 10px;
+}
+
+
+.signInLabelImg{
+  width: 70px;
+}
+
+.signInLabelText{
+  font-size: 11px;
+  text-align: justify;
+  line-height: 0.7rem;
+  letter-spacing: 0.01rem;
+  width: 95%;
+}
+
+.signInLabel{
+  display: flex;
+  align-items: center;
+}
+
+.header_icons{
+  position: absolute;
+  right: 19%;
+}
+
+.header_icon:first-child{
+  color: #e41c47;
+}
+
+.header_icon{
+  margin-right: 10px;
+  color: #252222;
+}
+
+.header_icon:hover{
+  color: #e41c47;
+}
+
+.upload_message{
+    max-width: 581px;
+    background: white;
+    margin: auto;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    /* height: 250px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    padding-bottom: 25px;
+    padding-top: 20px;
+
+}
+
+.upload_message h3{
+  text-transform: uppercase;
+  margin: auto;
+  letter-spacing: 0.05rem;
+  margin-bottom: 10px;
+}
+
+.upload_message p{
+  font-size: 14.4px;
+  width: 95%;
+  margin: auto;
+  text-align: justify;
+  line-height: 1.3rem;
+}
+
+.upload_signInButton{
+  width: 100px;
+  align-self: center;
+  top: 8px;
+  /* top: 10px; */
+}
+
+
+@media (max-width: 1320px){
+  .header_icons{
+    display: none;
+  }
+}
+
+
+@media (max-width: 800px){
+  .app__header{
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .searchForm{
+    display: none;
+  }
+
+  .signupButton{
+    position: relative;
+    /* float: right; */
+    left: 28%;
+  }
+
+  .signOutButton{
+    left: 55%;
+  }
+
+}
+
+@media (max-width: 600px){
+  .upload_message{
+      width: 90%;
+  }
+
+  
+
+  
+}
+
+
+

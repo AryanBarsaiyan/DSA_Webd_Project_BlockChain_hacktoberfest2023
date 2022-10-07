@@ -1,0 +1,95 @@
+.instaEmbed{
+    max-width: 380px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5px;
+    left: 2%;
+    position: absolute;
+}
+
+
+.embed_image{
+    width: 100%;
+    object-fit: contain;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+
+}
+
+.embedText{
+    padding: 10px;
+    padding-left: 12px;
+    padding-right: 15px;
+}
+
+.embedText h4{
+    margin-bottom: 7px;
+}
+
+.embedText p{
+    font-size: 14.3px;
+    text-align: justify;
+    letter-spacing: 0.03rem;
+    line-height: 1.17rem;
+}
+
+.embedText ul{
+    margin-top: 7px;
+    font-size: 14px;
+}
+
+
+.instaEmbed .footer{
+    display: flex;
+    padding-left: 22px;
+}
+
+.instaEmbed .footer_content{
+    /* position: absolute; */
+    margin-left: 20px;
+}
+
+.instaEmbed .footer_follow{
+    width: 85px;
+    font-size: 13px;
+    top: 4px;
+}
+
+.copyright{
+    color: #1b1a1a;
+    font-weight: 700;
+    margin: auto;
+    padding: 5px;
+    padding-top: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+}
+
+.copyright_icon{
+    margin-right: 2px;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+
+@media (max-width: 1465px){
+    .instaEmbed{
+      display: none;
+    }
+}
+
+
+
+
