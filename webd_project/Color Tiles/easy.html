@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <audio id="win" src="win.wav" preload="auto"></audio>
+  <title>Color Tiles</title>
+</head>
+<style>
+  body{
+    margin-top:1.5rem;
+    background-color: #000;
+  }
+  header,section{
+    display:flex;
+    justify-content: center;
+  }
+
+  #container{
+    display:grid;
+    grid-template-columns: repeat(3, 25px);
+    grid-template-rows: repeat(3,25px);
+    grid-gap:2rem;
+  }
+
+  #clock{
+    display:grid;
+    grid-template-rows: 0 0 1fr;
+    color:#f4f4f4;
+    font-size:3rem;
+    padding-left:2rem;
+  }
+
+
+  p{
+    color:#f4f4f4;
+    font-size:5rem;
+    padding-left:2rem;
+  }
+
+  aside{
+    font-size:0.5rem;
+    display:flex;
+    justify-content: flex-end;
+    padding-right:4rem;
+  }
+
+
+  .item{
+    background:#f4f4f4;
+    border:#ccc solid 2px;
+    padding:1.2rem;
+    font-weight: bold;
+    text-align:center;
+    border-radius:0.5rem;
+  }
+
+  #grid{
+    display:grid;
+    grid-template-columns: repeat(5,70px);
+    grid-template-rows: repeat(5,70px);
+    padding-top:30px;
+  }
+
+  .box{
+    background:#f4f4f4;
+    border:#ccc solid 5px;
+    padding:1.5rem;
+    font-weight: bold;
+    text-align:center;
+    border-radius: 0.2rem;
+  }
+
+  .box:nth-child(7){
+    border:#000 solid 5px;
+  }
+  .box:nth-child(8){
+    border:#000 solid 5px;
+  }
+  .box:nth-child(9){
+    border:#000 solid 5px;
+  }
+  .box:nth-child(12){
+    border:#000 solid 5px;
+  }
+  .box:nth-child(13){
+    border:#000 solid 5px;
+  }
+  .box:nth-child(14){
+    border:#000 solid 5px;
+  }
+  .box:nth-child(17){
+    border:#000 solid 5px;
+  }
+  .box:nth-child(18){
+    border:#000 solid 5px;
+  }
+  .box:nth-child(19){
+    border:#000 solid 5px;
+  }
+
+  #footer{
+    display:flex;
+    justify-content: center;
+    padding:1.5rem;
+  }
+
+  .easy{
+    font-size:2rem;
+    padding:0.5rem;
+  }
+
+  .hard{
+    font-size:2rem;
+    padding:0.5rem;
+  }
+
+  .btn{
+    color:#f4f4f4;
+    background-color: #333;
+    text-align:center;
+    padding:1rem;
+  }
+
+  @media (max-width:950px){
+    
+    #container{
+    display:grid;
+    grid-template-columns: repeat(3, 20px);
+    grid-template-rows: repeat(3,20px);
+    grid-gap:1.7rem;
+    }
+
+    .item{
+    background:#f4f4f4;
+    border:#ccc solid 2px;
+    padding:1rem;
+    font-weight: bold;
+    text-align:center;
+    border-radius:0.5rem;
+    }    
+
+    #grid{
+    display:grid;
+    grid-template-columns: repeat(5,70px);
+    grid-template-rows: repeat(5,70px);
+    padding-top:50px;
+  }
+
+    .box{
+    background:#f4f4f4;
+    border:#ccc solid 3px;
+    padding:1rem;
+    font-weight: bold;
+    text-align:center;
+    border-radius: 0.2rem;
+    }
+
+    #clock{
+    display:grid;
+    grid-template-rows: 0 0 1fr;
+    color:#f4f4f4;
+    font-size:2rem;
+    padding-left:2rem;
+    }
+
+    aside{
+      padding-right:0.5rem;
+    }
+
+    .easy{
+      font-size:0.5rem;
+      padding:0.5rem;
+    }
+
+    .hard{
+      font-size:0.5rem;
+      padding:0.5rem;
+    }
+
+    h2,p{
+      display:none;
+    }
+
+    .btn{
+      padding:0.5rem;
+    }
+  }
+
+  @media (max-width:500px){
+    #container{
+    display:grid;
+    grid-template-columns: repeat(3, 10px);
+    grid-template-rows: repeat(3,10px);
+    grid-gap:1.7rem;
+    }
+
+    .item{
+    background:#f4f4f4;
+    border:#ccc solid 2px;
+    padding:0.8rem;
+    font-weight: bold;
+    text-align:center;
+    border-radius:0.5rem;
+    }    
+
+    #grid{
+    display:grid;
+    grid-template-columns: repeat(5,60px);
+    grid-template-rows: repeat(5,60px);
+    padding-top:50px;
+    }
+
+    .box{
+    background:#f4f4f4;
+    border:#ccc solid 3px;
+    padding:1rem;
+    font-weight: bold;
+    text-align:center;
+    border-radius: 0.2rem;
+    }
+
+    #clock{
+    display:grid;
+    grid-template-rows: 0 0 1fr;
+    color:#f4f4f4;
+    font-size:2rem;
+    padding-left:2rem;
+    }
+
+    aside{
+      padding-right:0.5rem;
+    }
+
+    .easy{
+      font-size:0.5rem;
+      padding:0.2rem;
+    }
+
+    .hard{
+      font-size:0.5rem;
+      padding:0.2rem;
+    }
+
+    h2,p{
+      display:none;
+    } 
+    
+    .btn{
+      padding:0.5rem;
+    } 
+  }
+</style>
+<body>
+  <div id="clock">
+    <div class="timer">
+      <p><span class="hours">00</span>: <span class="minutes">00</span>: <span class="seconds">00</span> </p>
+    </div>
+  </div>
+  <header>
+    <div id="container">
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+    </div>
+  </header>
+
+  <aside class="mode">
+    <a href="easy.html">
+      <button class="easy">EASY</button>
+    </a>
+    <a href="hard.html">
+      <button class="hard">NORMAL</button>
+    </a>
+  </aside>
+
+  <section>
+    <div id="grid">
+      <div class="box" id='1' onclick="movementMechanism(this.id); answer(); points()"></div>
+      <div class="box" id='2' onclick="movementMechanism(this.id); answer(); points()"></div>
+      <div class="box" id='3' onclick="movementMechanism(this.id); answer(); points()"></div>
+      <div class="box" id='4' onclick="movementMechanism(this.id); answer(); points()"></div>
+      <div class="box" id='5' onclick="movementMechanism(this.id); answer(); points()"></div>
+      <div class="box" id='6' onclick="movementMechanism(this.id); answer(); points()"></div>
+      <div class="box" id='7' onclick="movementMechanism(this.id); answer(); points()"></div>
+      <div class="box" id='8' onclick="movementMechanism(this.id); answer(); points()"></div>
+      <div class="box" id='9' onclick="movementMechanism(this.id); answer(); points()"></div>
+      <div class="box" id='10' onclick="movementMechanism(this.id); answer(); points()"></div>
+      <div class="box" id='11' onclick="movementMechanism(this.id); answer(); points()"></div>
+      <div class="box" id='12' onclick="movementMechanism(this.id); answer(); points()"></div>
+      <div class="box" id='13' onclick="movementMechanism(this.id); answer(); points()"></div>
+      <div class="box" id='14' onclick="movementMechanism(this.id); answer(); points()"></div>
+      <div class="box" id='15' onclick="movementMechanism(this.id); answer(); points()"></div>
+      <div class="box" id='16' onclick="movementMechanism(this.id); answer(); points()"></div>
+      <div class="box" id='17' onclick="movementMechanism(this.id); answer(); points()"></div>
+      <div class="box" id='18' onclick="movementMechanism(this.id); answer(); points()"></div>
+      <div class="box" id='19' onclick="movementMechanism(this.id); answer(); points()"></div>
+      <div class="box" id='20' onclick="movementMechanism(this.id); answer(); points()"></div>
+      <div class="box" id='21' onclick="movementMechanism(this.id); answer(); points()"></div>
+      <div class="box" id='22' onclick="movementMechanism(this.id); answer(); points()"></div>
+      <div class="box" id='23' onclick="movementMechanism(this.id); answer(); points()"></div>
+      <div class="box" id='24' onclick="movementMechanism(this.id); answer(); points()"></div>
+      <div class="box" id='25' onclick="movementMechanism(this.id); answer(); points()"></div>
+    </div>
+  </section>
+
+  <footer id="footer">
+    <button class="btn" id="btn-1" onClick="window.location.href=window.location.href">RESET</button>
+  </footer>
+
+  <script src="easy_main.js"></script>
+  <script src="solution_easy.js"></script>
+  <script src="timer.js"></script>
+</body>
+</html>
