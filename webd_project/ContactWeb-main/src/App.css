@@ -1,0 +1,139 @@
+.App {
+  text-align: center;
+}
+body{
+  background-image: url('../public/bg1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.container{
+  width: 100%;
+  height:300px;
+ 
+}
+.contact100-form{
+  background-image: url('../public/f11.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.headingg{
+  text-align: center;
+  font-family: 'Vujahday Script', cursive;
+  font-size: 50px;
+}
+.container-contact100{
+  background-color: rgb(255, 255, 255);
+  width: 600px;
+  height: 600px;
+  margin: auto;
+  border: 2px solid black;
+  padding: 30dp;
+  box-shadow: 5px 10px #cecbcb;
+  align-items: center;
+margin-left: 290px;
+margin-top: 10px;
+
+}
+.headin{
+  text-align: center;
+  font-family: 'Amiri', serif;
+font-family: 'Eater', cursive;
+font-family: 'Fira Sans', sans-serif;
+font-family: 'Fredericka the Great', cursive;
+font-family: 'Kanit', sans-serif;
+font-family: 'Vujahday Script', cursive;
+font-size: 30px;
+color: #ffffff;
+}
+.footer{
+  width: 100%;
+  height: 50px;
+}
+.footer h5{
+  font-family: 'Amiri', serif;
+font-family: 'Eater', cursive;
+font-family: 'Fira Sans', sans-serif;
+font-family: 'Fredericka the Great', cursive;
+font-family: 'Kanit', sans-serif;
+font-family: 'The Nautigal', cursive;
+font-family: 'Vujahday Script', cursive;
+  text-align: center;
+  margin-top: 120px;
+  display: block;
+  font-size: 20px;
+  color: #d8a2ee;
+}
+.label-input100{
+  display: block;
+  margin-left: 30px;
+  margin-top: 30px;
+  font-size: 20px;
+  color: #ffffff;
+  font-family: 'Vujahday Script', cursive;
+  font-weight: 400;
+}
+.input100{
+  display: block;
+  align-items: center;
+  text-align: center;
+  width: 320px;
+  height: 30px;
+  font-family: 'Fira Sans', sans-serif;
+  background-color: rgb(242, 243, 243);
+  margin-left: 200px;
+  margin-top: -10px;
+}
+.contact100-form-btn{
+  font-family: 'Fira Sans', sans-serif;
+  color: rgb(255, 217, 0);
+border: none;
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin-left: 330px;
+margin-top: 30px;
+
+}
+.contact100-form-btn:hover{
+  background-color: rgb(235, 202, 19);
+  font-weight: 400;
+ 
+  color: aliceblue;
+}
+.contact100-more{
+  margin-top: 100px;
+  display: block;
+  font-size: 16px;
+  font-family: cursive;
+  font-weight: 400;
+  color: #9d5d08;
+  margin-left: 86px;
+}
+.contact100-form-title{
+ text-align: center;
+ display: block;
+ font-size: 50px;
+ color: #282c34;
+ font-weight: 500;
+ font-family: 'Amiri', serif;
+font-family: 'Bebas Neue', cursive;
+font-family: 'Eater', cursive;
+font-family: 'Fira Sans', sans-serif;
+font-family: 'Fredericka the Great', cursive;
+font-family: 'Kanit', sans-serif;
+font-family: 'The Nautigal', cursive;
+font-family: 'Vujahday Script', cursive;
+}
+
+/* .wrap-input100rs1-wrap-input100{
+  width: 100px;
+  color: #282c34;
+  height: 100px;
+  padding: 10px;
+  background-color: #61dafb;
+
+} */
