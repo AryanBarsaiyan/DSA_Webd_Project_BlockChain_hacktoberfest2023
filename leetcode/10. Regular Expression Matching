@@ -1,0 +1,37 @@
+const charsMatch = (char1, char2) => char1 === char2 || char2 === ".";
+
+const isMatch = (s, p) => {
+    let prevRow = new Array(p.length + 1).fill(false);
+    prevRow[0] = true;
+    
+    for(let col = 2; col < prevRow.length; col += 2){
+        if(p[col - 1] === "*" && prevRow[col - 2]){
+            prevRow[col] = true;
+        }
+    }
+	
+    for(let row = 1; row < s.length + 1; row++){
+        const nextRow = new Array(p.length + 1).fill(false);
+        
+        for(let col = 1; col < p.length + 1; col++){
+            const charS = s[row - 1];
+            const charP = p[col - 1];
+            
+            if(charsMatch(charS, charP)){
+                nextRow[col] = prevRow[col - 1];
+            } else if (charP === "*") {
+                const prevCharP = p[col - 2];
+                
+                if(!charsMatch(charS, prevCharP)){
+                    nextRow[col] = nextRow[col - 2];
+                } else {
+                    nextRow[col] = nextRow[col - 2] || prevRow[col];
+                }
+            }
+        }
+
+        prevRow = nextRow;
+    }
+    
+    return prevRow[p.length];
+}
