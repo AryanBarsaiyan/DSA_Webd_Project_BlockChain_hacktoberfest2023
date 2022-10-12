@@ -1,0 +1,34 @@
+class Solution:
+    def fullJustify(self, words: List[str], maxWidth: int) -> List[str]:
+        
+        bucket = []
+        
+        ans = []
+        
+        count = 0
+        
+        for word in words:
+			#Keep track of total length so far including 1 space per word
+            if count + len(bucket) + len(word) > maxWidth:
+				#Calculate total spaces needed
+                spaces = maxWidth - count
+                i = 0
+				#Distribute spaces evenly in all words except the last
+                while spaces > 0:
+                    bucket[i] += ' '
+                    if len(bucket) > 1:
+                        i =  ( i + 1 ) % ( len( bucket ) - 1 )
+                    spaces -= 1
+                ans .append(''.join(bucket))
+                bucket, count = [], 0
+            bucket.append(word)
+            count += len(word)
+        
+        #Last line should be left justifies, so append normally
+        ans.append(' '.join(bucket))
+		#Add additional spaces in the end
+		spaces = maxWidth - count - (len(bucket)-1)
+        ans[-1] += ' '*spaces
+        
+		#Voila you get the ans in O(n) time
+        return (ans)
