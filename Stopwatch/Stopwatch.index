@@ -1,0 +1,35 @@
+@@ -0,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="window">
+        <div class="outer">
+            <div class="timerscreen" id="timerscreen">
+                <label>Stop Watch</label>
+                <div>
+                    <label class="timer" id="timers">0</label>
+                    <label class="timer" id="timers">seconds</label>
+                    <label class="timer milli" id="timerms">00</label>
+                    <label class="timer milli" id="timerms">milliseconds</label>
+                </div>
+                <div class="buttonholder">
+                    <button class="reset button" onclick="startTimer()">Start</button>
+                    <button class="reset button" onclick="stopTimer()">Stop</button>
+                    <button class="reset button" onclick="resetTimer()">Reset</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
