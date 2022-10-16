@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<head>
+    <title>ClOCK</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <style>
+    .time{
+        font-size: 72px;
+        font-family: 'Ubuntu Mono', monospace;
+        font-weight: 800;
+        align-items: center;
+        color: aliceblue;
+        text-align: center;
+        width: 99%;
+        position:absolute;
+        top: 20%;
+    }
+    @keyframes day {
+        0% {
+            background: url("clockback.jpg");
+            background-size: cover;
+            background-attachment: fixed;
+        } 
+        25%{
+            background:url("clockback3.jpg");
+            background-size:cover;
+            background-attachment: fixed;
+        }
+        33%{
+            background:url("clockback2.jpg");
+            background-size:cover;
+            background-attachment: fixed;
+        }
+        70%{
+            background:url("clockback3.jpg");
+            background-size:cover;   
+            background-attachment: fixed;
+        }
+        100%{
+            background:url("clockback.jpg");
+            background-size:cover;   
+            background-attachment: fixed;
+        }
+    }
+    body{
+        background-image: white url("clockback.jpg");
+        animation-name: day;
+        animation-duration: 16s;
+        animation-iteration-count:infinite ;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    </style>
+</head>
+<body>
+    <div  class="time">
+        <h1 style="font-size: 72px;">MY DIGITAL CLOCK</h1>
+    <div id="clock"></div>
+    <script>
+        function time(){
+            let day=new Date();
+            let m=day.getMinutes();
+            let h=day.getHours();
+            let s=day.getSeconds();
+            if(s<10){
+                if(h<12){
+                document.getElementById("clock").innerHTML=h+":"+m+":"+"0"+s+"  AM";
+                 }
+                else{
+                    document.getElementById("clock").innerHTML=h+":"+m+":"+"0"+s+"  PM";
+
+                }
+            }
+            else
+            {
+                if(h<12){
+                document.getElementById("clock").innerHTML=h+":"+m+":"+s+"  AM";
+                 }
+                else{
+                    document.getElementById("clock").innerHTML=h+":"+m+":"+s+"  PM";
+    
+                }
+                
+            }
+        }
+        setInterval(time, 1000);
+        </script>
+
+<p style="font-size: 20px;font-family: 'Smooch', cursive;font-weight: 100;">Made By: Raghvendra Tiwari</p>
+        </div>
+    
+</body>
+</html>
