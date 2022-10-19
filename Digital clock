@@ -1,0 +1,174 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'popins', sans-serif;
+
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgb(0, 0, 0);
+}
+
+#time {
+    display: flex;
+    gap: 40px;
+    color: white;
+}
+
+#time .circle {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#time .circle svg {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    transform: rotate(270deg);
+
+}
+
+#time .circle svg circle {
+
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    stroke: rgb(237, 231, 231);
+    stroke-width: 4;
+    transform: translate(5px, 5px);
+
+}
+
+#time .circle svg circle:nth-child(2) {
+    stroke:var(--clr) ;
+    stroke-dasharray:440 ;
+
+
+}
+
+#time div {
+    position: absolute;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+#time .ap {
+    position: relative;
+    font-size: 4px;
+    transform: translate(-20px);
+
+}
+.dots{
+    position: relative;
+    height:100%;
+    width: 100%;
+
+}
+.dots::before{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: var(--clr);
+    box-shadow: 0 0 20px var(--clr);
+}
+    </style>
+    
+</head>
+
+<body>
+    <div id="time">
+
+        <div class="circle" style="--clr:rgb(220, 8, 8);">
+            <div class="dots_hr"></div>
+            <svg>
+                <circle cx="70" cy="70" r="70"></circle>
+                <circle cx="70" cy="70" r="70" id="hh"></circle>
+            </svg>
+            <div id="hours">00</div>
+        </div>
+
+        <div class="circle" style="--clr:rgb(8, 210, 8);">
+            <div class="dots_min"></div>
+            <svg>
+                <circle cx="70" cy="70" r="70"></circle>
+                <circle cx="70" cy="70" r="70" id="mm"></circle>
+            </svg>
+
+
+            <div id="minutes">00</div>
+        </div>
+        <div class="dots_sec"></div>
+        <div class="circle" style="--clr:rgb(142, 220, 8);">
+            <div class="dots_sec"></div>
+            <svg>
+                <circle cx="70" cy="70" r="70"></circle>
+                <circle cx="70" cy="70" r="70" id="ss"></circle>
+            </svg>
+            <div id="seconds">00</div>
+        </div>
+        <div class="ampm">
+            <div id="ampm">AM</div>
+        </div>
+    </div>
+    <script>
+        setInterval(() => {
+            let hours = document.getElementById('hours');
+            let minutes = document.getElementById('minutes');
+            let seconds = document.getElementById('seconds');
+            let ampm = document.getElementById('ampm');
+
+            let hh = document.getElementById('hh');
+            let mm = document.getElementById('mm');
+
+            let ss = document.getElementById('ss');
+
+
+            let h = new Date().getDate();
+            let m = new Date().getMinutes();
+            let s = new Date().getSeconds();
+            let am = h >= 12 ? 'PM' : "AM";
+            // convert 24hrs format into 12hrs
+            if (h > 12) {
+                h = h - 12;
+            }
+            //to add zero above single digit number
+            h = (h < 10) ? "0" + h : h;
+            m = (m < 10) ? "0" + m : m;
+            s = (s < 10) ? "0" + s : s;
+
+
+
+            hours.innerHTML = h;
+            minutes.innerHTML = m;
+            seconds.innerHTML = s;
+            ampm.innerHTML = am;
+
+            hh.style.strokeDashoffset = 440 - (440 * h) / 12;
+            mm.style.strokeDashoffset = 440 - (440 * m) / 60;
+            ss.style.strokeDashoffset = 440 - (440 * s) / 60;
+        });
+
+    </script>
+
+</body>
+
+</html>
