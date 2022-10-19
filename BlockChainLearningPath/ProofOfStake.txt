@@ -1,0 +1,70 @@
+
+Ethereum changed its consensus policy and underwent a two-stage merge, codenamed Bellatrix and Paris, on 15th of September, 2022.
+With this, Ethereum puts its very own existence at stake to make the world realize the importance and use of the Blockchain Technology and to lead to its better adaptation.
+
+[]What is the concept of Proof-of-Stake (PoS)?
+
+Proof-of-stake (PoS) underlies Ethereum's consensus mechanism. 
+Proof-of-stake mechanism is more secure, less energy-intensive, and better for implementing new scaling solutions compared to the previous proof-of-work architecture.
+Proof-of-stake achieves distributed consensus. In proof-of-work, miners prove they have capital at risk by expending energy. 
+As Ethereum now uses proof-of-stake, the validators explicitly stake capital in the form of ETH(ether) into a smart contract on Ethereum. 
+This staked ETH then acts as collateral that can be destroyed if the validator behaves dishonestly. 
+The validator is then responsible for checking that new blocks propagated over the network are valid and occasionally creating and propagating new blocks themselves. 
+The POS on Ethereum merged at block 15537393.
+
+[]Now, one might ask what is a Consensus Mechanism?
+
+    The term consensus mechanism refers to the entire stack of protocols, incentives and ideas that allow a network of nodes to agree on the state of a blockchain. 
+    Ethereum uses a proof-of-stake-based consensus mechanism that derives its crypto-economic security from a set of rewards and penalties applied to capital locked by stakers. 
+    This incentive structure encourages individual stakers to operate honest validators, punishes those who don't, and creates an extremely high cost to attack the network.
+
+[]Improvements to the now-deprecated proof-of-work system include the following:
+
+    ->Better energy efficiency since proof-of-work computations don't require as much energy to run. 
+    ->Lower entrance barriers and less hardware requirements because new blocks don't require elite hardware.
+    ->Because proof-of-stake requires less energy, fewer ETH tokens need to be issued to encourage participation. 
+    ->Economic penalties for bad behaviour make 51% style attacks exponentially more expensive for an attacker compared to proof-of-work. 
+    If a 51% attack were to succeed despite the crypto-economic defences, the community could turn to social recovery of an honest chain.
+
+If you want to get a visual explaination of the difference between the Proof-of-Work and Proof-of-Stake then delve into this [Link here](https://www.youtube.com/watch?v=M3EFi_POhps) brilliant video from 'Simply Explained'.
+
+[]VALIDATORS:
+    In order to take part as a validator, a user needs to deposit 32 ETH into the deposit contract and execute three different pieces of software: an execution client, a consensus client, and a validator. 
+    The user joins an activation queue when they deposit ETH, which lowers the rate at which new validators can join the network. 
+    Once engaged, validators on the Ethereum network get fresh blocks from their peers. 
+    The transactions delivered in the block are carried out again, and the validity of the block is verified by examining the block signature. 
+    The validator then broadcasts a support for that block, known as an attestation, across the network.
+
+    In proof-of-stake, the pace is fixed, in contrast to proof-of-work, where the timing of blocks is dictated by the difficulty of the mining process. 
+    Proof-of-stake duration Ethereum is separated into epochs and slots, each lasting 12 seconds (32 slots). 
+    In each slot, one validator is chosen at random to propose a block. A fresh block must be created and distributed to other network nodes by this validator. 
+    A committee of validators is also drawn at random for each slot, and their votes are used to determine whether or not the block being presented is genuine.
+
+[]FINALITY:
+    A transaction in a distributed network has "finality" if it is a part of a block that cannot be changed without burning a sizable amount of ETH. 
+    On Ethereum with proof-of-stake, it is controlled by "checkpoint" blocks. Each has a checkpoint as its first block. 
+    Pairs of checkpoints that the validators deem to be valid receive votes. 
+    A pair of checkpoints is upgraded if it receives votes equal to at least two-thirds of the total amount of ETH staked. 
+    The aim becomes "justifiable" as it is the more recent of the two. Because it served as the "goal" in the preceding epoch, the earlier of the two is already justified. 
+    The status is now "finalised." An attacker would have to agree to losing at least one-third of the total amount of staked ETH in order to roll back a finished block. 
+    This is addressed in detail in this blog article from the Ethereum Foundation. 
+    An attacker might stop the network from reaching finality by voting with one-third of the total stake because finality requires a two-thirds majority. 
+    The inactivity leak is a defence mechanism against this. When the chain doesn't finalise for more than four epochs, this turns on. 
+    By draining the staked ETH from validators who voted against the majority due to inactivity, the majority was able to reclaim a two-thirds majority and complete the chain.
+
+[]Sybil resistance & chain selection:
+    
+    Proof-of-work and proof-of-stake are not consensus protocols alone, but they are referred to as such for the sake of Simplicity. 
+    They are actually Sybil resistance mechanisms and block author selectors and thus they are a way to decide who is the author of the latest block. 
+    Another important component is the chain selection (aka fork choice) algorithm that enables nodes to pick one single correct block at the head of the chain in scenarios where multiple blocks exist in the same position.
+
+    Sybil resistance measures how a protocol fares against a Sybil attack. Sybil attacks are when one user or group pretends to be many users. 
+    Resistance to this type of attack is essential for a decentralized blockchain and enables miners and validators to be rewarded equally based on resources put in. 
+    Proof-of-work and proof-of-stake protect against this by making users expend a lot of energy or put up a lot of collateral. 
+    These protections are an economic deterrent to Sybil attacks.
+
+    Ethereum uses a consensus mechanism known as [GASPER](https://ethereum.org/en/developers/docs/consensus-mechanisms/pos/gasper/)
+    that essentially merges the [Casper](https://arxiv.org/abs/1710.09437) FFG proof-of-stake with the [GHOST](https://arxiv.org/abs/2003.03052) fork-choice rule.
+
+
+
