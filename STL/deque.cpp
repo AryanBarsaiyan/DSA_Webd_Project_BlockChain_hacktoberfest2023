@@ -1,3 +1,8 @@
+/*
+ DEQUE:
+A linear collection that supports element insertion and removal at both ends. The name deque is short for "double ended queue" and is usually pronounced "deck".
+Beautiful and optimised simple code
+    */
 #include<iostream>
 #include<deque>
 
