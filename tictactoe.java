@@ -40,9 +40,9 @@ System.out.print("Enter a column number:(1-" + n + ")");
 col = in.nextInt();
 col=col-1;
 if(row < 0 || col < 0 || row >= n || col >= n) {
-System.out.println(" Some error occured try again.");
+System.out.println(" Some error occurred try again.");
 } else if(board[row][col] != '*') {
-System.out.println("Some error occured try again.");
+System.out.println("Some error occurred try again.");
 } else {
 break;
 }
